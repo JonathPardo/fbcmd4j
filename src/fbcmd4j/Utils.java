@@ -2,6 +2,8 @@ package fbcmd4j;
 
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -89,5 +91,10 @@ public class Utils {
 			System.out.println("Se creo el post con el contenido: "+post);
 			logger.info("Se creo un post en facebook");
 	}
+	public static void crearPostLink(Facebook facebook, String post) throws FacebookException, MalformedURLException{
+		facebook.postLink(new URL(post));
+		System.out.println("Se creo un nuevo post con el link: "+post);
+		logger.info("Se creo un post con link en facebook");
+}
 	
 }
