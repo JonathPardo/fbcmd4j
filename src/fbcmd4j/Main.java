@@ -5,8 +5,6 @@ import java.util.InputMismatchException;
 import java.util.Properties;
 import java.util.Scanner;
 
-import javax.xml.parsers.FactoryConfigurationError;
-
 import facebook4j.*;
 
 
@@ -58,12 +56,13 @@ public class Main {
 							break;
 						case 1: 
 							System.out.println("Selecciono Mostrar NewsFeed");
-							ResponseList<Post> feed = facebook.getHome();
+							ResponseList<Post> feed = facebook.getFeed();
 							Utils.NewsFeed(feed);
 							break;
 						case 2:
 							System.out.println("Selecciono Mostrar Wall");
-							
+							ResponseList<Post> feed1 = facebook.getPosts();
+							Utils.Wall(feed1);
 							break;
 						case 3:
 							System.out.println("Selecciono Crear un nuevo estado");
