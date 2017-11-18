@@ -86,7 +86,7 @@ public class Main {
 					System.out.println("Ocurrió un errror, favor de revisar log.");
 					logger.error("Opción inválida. %s. \n", ex.getClass());
 					scanner.next();
-				} catch (FactoryConfigurationError ex){
+				} catch (FacebookException ex){
 					System.out.println("Ocurrió un errror, favor de revisar log.");
 					logger.error(ex.getMessage());
 					scanner.next();
