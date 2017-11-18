@@ -33,7 +33,7 @@ public class Main {
 		int seleccion;
 		try (Scanner scanner = new Scanner(System.in)){
 			while(true){
-				
+				facebook= Utils.CargarConfiguracionFb(props);
 				
 				// Inicio Menu
 				System.out.format("Aplicación de Facebook %s\n\n", APP_VERSION);
@@ -58,7 +58,8 @@ public class Main {
 							break;
 						case 1: 
 							System.out.println("Selecciono Mostrar NewsFeed");
-							
+							ResponseList<Post> feed = facebook.getHome();
+							Utils.NewsFeed(feed);
 							break;
 						case 2:
 							System.out.println("Selecciono Mostrar Wall");
@@ -66,8 +67,10 @@ public class Main {
 							break;
 						case 3:
 							System.out.println("Selecciono Crear un nuevo estado");
+							System.out.println("Escribe el mensaje que deseas postear");
+							String post=scanner.nextLine();
 							
-							
+							Utils.crearPost(facebook, post);
 							break;
 						case 4:
 							System.out.println("Selecciono Crear un link");

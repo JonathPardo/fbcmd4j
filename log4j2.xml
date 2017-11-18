@@ -13,11 +13,11 @@
 	</Appenders>
 	<Loggers>
 		<Root level="error"/>
-		<Logger name="twitter.Main" level="info">
+		<Logger name="fbcmd4j.Main" level="info">
 			<AppenderRef ref="Console" />
 			<AppenderRef ref="Logfile" />
 		</Logger>
-		<Logger name="twitter.Utils" level="info">
+		<Logger name="fbcmd4j.Utils" level="info">
 			<AppenderRef ref="Logfile" />
 		</Logger>
 	</Loggers>
