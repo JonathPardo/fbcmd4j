@@ -16,6 +16,8 @@ import org.apache.logging.log4j.Logger;
 import facebook4j.Facebook;
 import facebook4j.FacebookException;
 import facebook4j.FacebookFactory;
+import facebook4j.Post;
+import facebook4j.ResponseList;
 import facebook4j.auth.AccessToken;
 
 
@@ -52,18 +54,29 @@ public class Utils {
 	}
 	
 	static void ConfigurarToken(String foldername, String filename, Properties props, Scanner scanner) throws FacebookException {
+		//Fixed
+		
+	}
+
+	public static Facebook CargarConfiguracionFb(Properties props)
+	{
 		Facebook facebook = new FacebookFactory().getInstance();
 		facebook.setOAuthAppId(props.getProperty("oauth.appId"), props.getProperty("oauth.appSecret"));
 		facebook.setOAuthPermissions(props.getProperty("oauth.permissions"));
 		facebook.setOAuthAccessToken(new AccessToken(props.getProperty("oauth.accessToken"), null));
-		
-		System.out.println(props.getProperty("oauth.appId"));
-		System.out.println(props.getProperty("oauth.appSecret"));
-		System.out.println(props.getProperty("oauth.permissions"));
-		System.out.println(props.getProperty("oauth.accessToken"));
-		
-		facebook.postStatusMessage("Gaara del Desierto creo que ya logre hacer algo ");
+		return facebook;
+	}
+	
+	
+	public static void NewsFeed(ResponseList<Post> statuses){
 
+		
+	}
+	
+	public static void crearPost(Facebook facebook, String post) throws FacebookException{
+			facebook.postStatusMessage(post);
+			System.out.println("Se creo el post con el contenido: "+post);
+			logger.info("Se creo un post en facebook");
 	}
 	
 }
