@@ -78,7 +78,10 @@ public class Utils {
 	
 	public static void Wall(ResponseList<Post> statuses){
 		
-	
+		 for (Post status : statuses) {
+			 System.out.println(status.getMessage());
+        }
+		 logger.info("Se obtuvo el Wall (muro)");
 	}
 	
 	public static void crearPost(Facebook facebook, String post) throws FacebookException{
