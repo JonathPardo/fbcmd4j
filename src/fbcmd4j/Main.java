@@ -73,7 +73,9 @@ public class Main {
 							break;
 						case 4:
 							System.out.println("Selecciono Crear un link");
-							
+							System.out.println("Escribe el link a postear");
+							String link=scanner.nextLine();
+							Utils.crearPost(facebook, link);
 							
 							break;
 						case 5:
