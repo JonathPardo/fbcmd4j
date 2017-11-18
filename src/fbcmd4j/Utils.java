@@ -69,8 +69,16 @@ public class Utils {
 	
 	
 	public static void NewsFeed(ResponseList<Post> statuses){
-
 		
+		 for (Post status : statuses) {
+			 System.out.println(status.getStory());
+         }
+		 logger.info("Se obtuvo las NewsFeed");
+	}
+	
+	public static void Wall(ResponseList<Post> statuses){
+		
+	
 	}
 	
 	public static void crearPost(Facebook facebook, String post) throws FacebookException{
