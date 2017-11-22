@@ -80,7 +80,7 @@ public class Main {
 							break;
 						case 5:
 							System.out.println("Selecciono Salir");
-							
+							System.out.println("Gracias por utilizar esta aplicación");
 							System.exit(0);
 						default:
 							logger.error("Opción inválida");
