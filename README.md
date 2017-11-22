@@ -7,14 +7,14 @@ Para descargar el archivo es necesario el comando git clone https://github.com/J
 Importar archivo en eclipse
 File> Import> Existing Projects into Workspace.
 
-#Exportar 
+# Exportar 
 File> Export> Runnable JAR file.
 
-#Acciones
+# Acciones
 - (0) Configurar cliente
 Para utilizar la aplicación es necesario tener el:
-#oauth.appId
-#oauth.appSecret
+*oauth.appId
+*oauth.appSecret
 
 Despues de ingresarlo, sera redireccionado a la dirección  "https://developers.facebook.com/apps/"+oauth.appID+"/fb-login/"; (es automatico)
 Se pide la configuración de un redireccionamiento.
