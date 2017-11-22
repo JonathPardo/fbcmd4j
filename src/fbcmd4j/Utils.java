@@ -118,7 +118,7 @@ public class Utils {
 		+ props.getProperty("oauth.appId")+ "&redirect_uri=" + redirectUrl + "&client_secret="
 		+ props.getProperty("oauth.appSecret") + "&code="+code;
 		 JSONObject json = readJsonFromUrl(quedope);
-		 //System.out.println(json.toString());
+	
 		 //System.out.println(json.get("access_token"));
 		 String key = (String) json.get("access_token");
 		 System.out.println("Se ha cargado correctamente el access token de usuario");
