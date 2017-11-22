@@ -14,8 +14,8 @@ File> Export> Runnable JAR file.
 - (0) Configurar cliente
 Para utilizar la aplicación es necesario tener el:
 
-# oauth.appId
-# oauth.appSecret
+### oauth.appId
+### oauth.appSecret
 
 Despues de ingresarlo, sera redireccionado a la dirección  "https://developers.facebook.com/apps/"+oauth.appID+"/fb-login/"; (es automatico)
 Se pide la configuración de un redireccionamiento.
